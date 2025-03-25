@@ -1,15 +1,15 @@
-#' Get a secret from you bws vault
+#' Get a secret from your Bitwarden Secrets Manager vault
 #'
-#' This function takes a key of your secret and returns the corresponding value
+#' This function retrieves the value of a secret stored in your Bitwarden Secrets Manager vault using the specified key.
 #'
-#' @param key A character string
-#' @param access_token Optional. A character string
-#' @param server_url Optional. A character string
+#' @param key A character string representing the key of the secret.
+#' @param access_token Optional. A character string representing the Bitwarden access token. Defaults to the value of the "BITWARDEN_ACCESS_TOKEN" environment variable.
+#' @param server_url Optional. A character string representing the Bitwarden server URL. Defaults to "https://vault.bitwarden.eu".
 #'
-#' @return A character string containing your secret
+#' @return A character string containing the value of the secret.
 #' @export
 #'
-get_bws_secret <- function(key, access_token = Sys.getenv("BITWARDEN_ACCESs_TOKEN"), server_url = "https://vault.bitwarden.eu") {
+get_bws_secret <- function(key, access_token = Sys.getenv("BITWARDEN_ACCESS_TOKEN"), server_url = "https://vault.bitwarden.eu") {
   # Validate access token
   if (access_token == "") {
     stop("No BWS_ACCESS_TOKEN provided or set as environment variable.")
