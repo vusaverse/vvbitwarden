@@ -2,3 +2,5 @@
 ^renv\.lock$
 ^vvbitwarden\.Rproj$
 ^\.Rproj\.user$
+^LICENSE\.md$
+^\.github$

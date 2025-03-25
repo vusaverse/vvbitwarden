@@ -6,7 +6,7 @@
 \usage{
 get_bws_secret(
   key,
-  access_token = Sys.getenv("BITWARDEN_ACCES_TOKEN"),
+  access_token = Sys.getenv("BITWARDEN_ACCESs_TOKEN"),
   server_url = "https://vault.bitwarden.eu"
 )
 }
