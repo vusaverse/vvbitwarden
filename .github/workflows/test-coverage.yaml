@@ -1,5 +1,5 @@
-# Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
-# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+# .github/workflows/test-coverage.yaml
+
 on:
   push:
     branches: [main, master]
@@ -11,9 +11,11 @@ name: test-coverage
 jobs:
   test-coverage:
     runs-on: ubuntu-latest
+
     env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }},
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       BWS_ACCESS_TOKEN: ${{ secrets.BWS_ACCESS_TOKEN }}
+
     steps:
       - uses: actions/checkout@v4
 
@@ -26,6 +28,24 @@ jobs:
           extra-packages: any::covr
           needs: coverage
 
+      # ✅ Debug: Check if token is present (shell level)
+      - name: Check if BWS_ACCESS_TOKEN is set
+        run: |
+          if [ -z "$BWS_ACCESS_TOKEN" ]; then
+            echo "❌ BWS_ACCESS_TOKEN is NOT set"
+            exit 1
+          else
+            echo "✅ BWS_ACCESS_TOKEN is set"
+          fi
+        shell: bash
+
+      # ✅ Debug: Check if token is visible in R
+      - name: Check BWS_ACCESS_TOKEN in R
+        run: |
+          cat("BWS_ACCESS_TOKEN in R: ", Sys.getenv("BWS_ACCESS_TOKEN") != "", "\n")
+        shell: Rscript {0}
+
+      # 🔍 Run the test coverage analysis
       - name: Test coverage
         run: |
           covr::codecov(
@@ -35,16 +55,4 @@ jobs:
           )
         shell: Rscript {0}
 
-      - name: Show testthat output
-        if: always()
-        run: |
-          ## --------------------------------------------------------------------
-          find '${{ runner.temp }}/package' -name 'testthat.Rout*' -exec cat '{}' \; || true
-        shell: bash
-
-      - name: Upload test results
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: coverage-test-failures
-          path: ${{ runner.temp }}/package
+      # 🧪 Output testthat results even if failure occurs
