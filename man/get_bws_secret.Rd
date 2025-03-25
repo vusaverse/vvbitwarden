@@ -2,24 +2,24 @@
 % Please edit documentation in R/get_bws_secret.R
 \name{get_bws_secret}
 \alias{get_bws_secret}
-\title{Get a secret from you bws vault}
+\title{Get a secret from your Bitwarden Secrets Manager vault}
 \usage{
 get_bws_secret(
   key,
-  access_token = Sys.getenv("BITWARDEN_ACCESs_TOKEN"),
+  access_token = Sys.getenv("BITWARDEN_ACCESS_TOKEN"),
   server_url = "https://vault.bitwarden.eu"
 )
 }
 \arguments{
-\item{key}{A character string}
+\item{key}{A character string representing the key of the secret.}
 
-\item{access_token}{Optional. A character string}
+\item{access_token}{Optional. A character string representing the Bitwarden access token. Defaults to the value of the "BITWARDEN_ACCESS_TOKEN" environment variable.}
 
-\item{server_url}{Optional. A character string}
+\item{server_url}{Optional. A character string representing the Bitwarden server URL. Defaults to "https://vault.bitwarden.eu".}
 }
 \value{
-A character string containing your secret
+A character string containing the value of the secret.
 }
 \description{
-This function takes a key of your secret and returns the corresponding value
+This function retrieves the value of a secret stored in your Bitwarden Secrets Manager vault using the specified key.
 }
