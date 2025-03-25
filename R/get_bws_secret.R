@@ -9,7 +9,7 @@
 #' @return A character string containing your secret
 #' @export
 #'
-get_bws_secret <- function(key, access_token = Sys.getenv("BITWARDEN_ACCES_TOKEN"), server_url = "https://vault.bitwarden.eu") {
+get_bws_secret <- function(key, access_token = Sys.getenv("BITWARDEN_ACCESs_TOKEN"), server_url = "https://vault.bitwarden.eu") {
   # Validate access token
   if (access_token == "") {
     stop("No BWS_ACCESS_TOKEN provided or set as environment variable.")
