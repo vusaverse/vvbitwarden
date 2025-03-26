@@ -1,0 +1,18 @@
+Package: vvbitwarden
+Title: Interacts with Bitwarden Secrets Manager
+Version: 0.0.0.9000
+Authors@R: 
+    c(person("Hajo", "Bons", , "h.b.bons@vu.nl", role = c("aut", "cre")),
+    person("Tomer", "Iwan", email = "t.iwan@vu.nl", role = "aut"))
+Description: Provides functions to securely retrieve secrets from a Bitwarden Secrets Manager vault using the 
+              Bitwarden CLI, enabling secret and configuration management within R packages and workflows.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: 
+    jsonlite,
+    processx
