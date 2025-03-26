@@ -6,16 +6,16 @@
 \usage{
 get_bws_secret(
   key,
-  access_token = Sys.getenv("BITWARDEN_ACCESS_TOKEN"),
-  server_url = "https://vault.bitwarden.eu"
+  bws_access_token = get_bws_access_token(),
+  bws_server_url = get_bws_server_url()
 )
 }
 \arguments{
 \item{key}{A character string representing the key of the secret.}
 
-\item{access_token}{Optional. A character string representing the Bitwarden access token. Defaults to the value of the "BITWARDEN_ACCESS_TOKEN" environment variable.}
+\item{bws_access_token}{Optional. A character string representing the Bitwarden access token. Defaults to the value of the "BITWARDEN_ACCESS_TOKEN" environment variable.}
 
-\item{server_url}{Optional. A character string representing the Bitwarden server URL. Defaults to "https://vault.bitwarden.eu".}
+\item{bws_server_url}{Optional. A character string representing the Bitwarden server URL. Defaults to the value of the "BWS_SERVER_URL" environment variable. For example "https://vault.bitwarden.eu".}
 }
 \value{
 A character string containing the value of the secret.
