@@ -2,7 +2,9 @@
 
 `vvbitwarden` is an R package that provides functions to interact with your Bitwarden Secrets Manager vault. It allows you to securely retrieve secrets stored in your Bitwarden vault. 🔐✨
 
-![Cool Banner](https://via.placeholder.com/800x200.png?text=vvbitwarden+%F0%9F%9A%80%F0%9F%94%92)
+## Prerequisites ⚠️
+Before using vvbitwarden, make sure you have the Bitwarden Secrets Manager CLI (BWS CLI) installed on your system:
+[Secrets Manager CLI](https://bitwarden.com/help/secrets-manager-cli/)
 
 ## Installation 💻
 
@@ -10,7 +12,7 @@ To install the `vvbitwarden` package, you can use the following command:
 
 ```r
 # Install the development version from GitHub
-devtools::install_github("yourusername/vvbitwarden")
+devtools::install_github("vusaverse/vvbitwarden")
 ```
 
 ## Usage 📦

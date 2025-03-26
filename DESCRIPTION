@@ -1,5 +1,5 @@
 Package: vvbitwarden
-Title: An Interface for Secure Secret Retrieval from Bitwarden Secrets manager
+Title: Interacts with Bitwarden Secrets Manager
 Version: 0.0.0.9000
 Authors@R: 
     c(person("Hajo", "Bons", , "h.b.bons@vu.nl", role = c("aut", "cre")),
