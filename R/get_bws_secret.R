@@ -8,7 +8,16 @@
 #'
 #' @return A character string containing the value of the secret.
 #' @export
+#' @examples
+#' \dontrun{
+#' # Set environment variables for testing (example values)
+#' Sys.setenv(BWS_ACCESS_TOKEN = "your_access_token_here")
+#' Sys.setenv(BWS_SERVER_URL = "https://vault.bitwarden.eu")
 #'
+#' # Retrieve a secret using a key (the key must exist in your vault)
+#' my_secret <- get_bws_secret("my-secret-key")
+#' print(my_secret)
+#' }
 get_bws_secret <- function(key, bws_access_token = get_bws_access_token(), bws_server_url = get_bws_server_url()) {
   # Directly retrieve the secret value for a specific key
   result <- processx::run(
