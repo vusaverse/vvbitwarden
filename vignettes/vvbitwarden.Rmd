@@ -1,0 +1,78 @@
+---
+title: "Using vvbitwarden to Retrieve Secrets from Bitwarden"
+author:
+  - name: "Tomer Iwan"
+    affiliation: "Vrije Universiteit"
+  - name: "Hajo Bons"
+    affiliation: "Vrije Universiteit"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using vvbitwarden to Retrieve Secrets from Bitwarden}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# vvbitwarden 🚀🔒
+
+`vvbitwarden` is an R package that provides functions to interact with your Bitwarden Secrets Manager vault. It allows you to securely retrieve secrets stored in your Bitwarden vault. 🔐✨
+
+## Prerequisites ⚠️
+
+Before using `vvbitwarden`, make sure you have the Bitwarden Secrets Manager CLI (BWS CLI) installed on your system:
+
+👉 [Secrets Manager CLI Documentation](https://bitwarden.com/help/secrets-manager-cli/)
+
+You will also need a Bitwarden access token and an initialized vault.
+
+## Installation 💻
+
+To install the development version from GitHub:
+
+```r
+# Install devtools if needed
+install.packages("devtools")
+
+# Install the package
+devtools::install_github("vusaverse/vvbitwarden")
+```
+
+## Retrieving a Secret 🔑
+
+The `get_bws_secret()` function retrieves the value of a secret from your Bitwarden Secrets Manager vault.
+
+```r
+library(vvbitwarden)
+
+# Retrieve a secret (requires the environment variable BITWARDEN_ACCESS_TOKEN to be set)
+# or provide it explicitly via the access_token argument
+
+# secret_value <- get_bws_secret("my_secret_key")
+# print(secret_value)
+```
+
+> ⚠️ For security reasons, we recommend storing your Bitwarden access token in an environment variable:
+>
+> ```r
+> Sys.setenv(BITWARDEN_ACCESS_TOKEN = "your_token_here")
+> ```
+
+## Function Arguments
+
+- `key`: A character string representing the key of the secret.
+- `access_token`: Optional. Defaults to the "BITWARDEN_ACCESS_TOKEN" environment variable.
+- `server_url`: Optional. Defaults to `"https://vault.bitwarden.eu"`.
+
+## Return Value
+
+The function returns the value of the secret as a character string.
+
+## License
+
+This package is licensed under the MIT License.
