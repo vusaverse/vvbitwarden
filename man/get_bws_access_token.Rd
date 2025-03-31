@@ -13,3 +13,12 @@ A character string containing the BWS access token.
 Retrieves the \code{BWS_ACCESS_TOKEN} from environment variables. This token is
 used to authenticate with the Bitwarden Secrets Manager API.
 }
+\examples{
+\dontrun{
+# Set an environment variable (for testing purposes)
+Sys.setenv(BWS_ACCESS_TOKEN = "example_token_123")
+
+# Retrieve the token
+token <- get_bws_access_token()
+}
+}

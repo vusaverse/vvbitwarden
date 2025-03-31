@@ -23,3 +23,14 @@ A character string containing the value of the secret.
 \description{
 This function retrieves the value of a secret stored in your Bitwarden Secrets Manager vault using the specified key.
 }
+\examples{
+\dontrun{
+# Set environment variables for testing (example values)
+Sys.setenv(BWS_ACCESS_TOKEN = "your_access_token_here")
+Sys.setenv(BWS_SERVER_URL = "https://vault.bitwarden.eu")
+
+# Retrieve a secret using a key (the key must exist in your vault)
+my_secret <- get_bws_secret("my-secret-key")
+print(my_secret)
+}
+}
