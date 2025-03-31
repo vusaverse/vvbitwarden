@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="man/figures/vvbitwarden-logo.png" width="200" alt="vvbitwarden logo"/>
+</p>
+
+
 # vvbitwarden 🚀🔒
 
 `vvbitwarden` is an R package that provides functions to interact with your Bitwarden Secrets Manager vault. It allows you to securely retrieve secrets stored in your Bitwarden vault. 🔐✨
