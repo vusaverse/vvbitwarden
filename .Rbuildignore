@@ -5,8 +5,5 @@
 ^LICENSE\.md$
 ^\.github$
 ^CRAN-SUBMISSION$
-<<<<<<< Updated upstream
 ^doc$
 ^Meta$
-=======
->>>>>>> Stashed changes
