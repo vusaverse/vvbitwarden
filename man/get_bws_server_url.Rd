@@ -13,13 +13,3 @@ A character string containing the BWS server URL.
 Retrieves the \code{BWS_SERVER_URL} from environment variables. This URL is
 used to define the Bitwarden Secrets Manager server endpoint.
 }
-\examples{
-\dontrun{
-# Set an environment variable for the server URL (example value)
-Sys.setenv(BWS_SERVER_URL = "https://vault.bitwarden.eu")
-
-# Retrieve the server URL
-url <- get_bws_server_url()
-print(url)
-}
-}

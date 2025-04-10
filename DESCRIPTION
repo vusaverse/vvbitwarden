@@ -1,11 +1,12 @@
 Package: vvbitwarden
-Title: Interacts with Bitwarden Secrets Manager
+Title: Interacts with 'Bitwarden Secrets Manager'
 Version: 0.1.0
 Authors@R: 
     c(person("Hajo", "Bons", , "h.b.bons@vu.nl", role = c("aut", "cre")),
     person("Tomer", "Iwan", email = "t.iwan@vu.nl", role = "aut"))
-Description: Provides functions to securely retrieve secrets from a Bitwarden Secrets Manager vault using the 
-              Bitwarden CLI, enabling secret and configuration management within R packages and workflows.
+Description: Provides functions to securely retrieve secrets from a 'Bitwarden Secrets Manager' vault using the 
+              'Bitwarden CLI', enabling secret and configuration management within R packages and workflows. 
+              For more information visit <https://bitwarden.com/products/secrets-manager/>.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -13,7 +14,8 @@ RoxygenNote: 7.3.2
 Suggests: 
     knitr,
     rmarkdown,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    withr
 Config/testthat/edition: 3
 Imports: 
     jsonlite,
