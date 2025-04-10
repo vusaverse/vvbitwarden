@@ -1,4 +1,14 @@
+<p align="center">
+  <img src="man/figures/vvbitwarden-logo.png" width="200" alt="vvbitwarden logo"/>
+</p>
+
+
 # vvbitwarden 🚀🔒
+[![CRAN status](https://www.r-pkg.org/badges/version/vvbitwarden)](https://cran.r-project.org/package=vvbitwarden)
+[![CRAN downloads](https://cranlogs.r-pkg.org/badges/grand-total/vvbitwarden)](https://cran.r-project.org/package=vvbitwarden)
+[![Monthly downloads](https://cranlogs.r-pkg.org/badges/last-month/vvbitwarden)](https://cran.r-project.org/package=vvbitwarden)
+
+
 
 `vvbitwarden` is an R package that provides functions to interact with your Bitwarden Secrets Manager vault. It allows you to securely retrieve secrets stored in your Bitwarden vault. 🔐✨
 

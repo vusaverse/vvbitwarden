@@ -4,13 +4,6 @@
 #' used to define the Bitwarden Secrets Manager server endpoint.
 #'
 #' @return A character string containing the BWS server URL.
-#' @examples
-#' Set an environment variable for the server URL (example value)
-#' Sys.setenv(BWS_SERVER_URL = "https://vault.bitwarden.eu")
-#'
-#' # Retrieve the server URL
-#' url <- get_bws_server_url()
-#' print(url)
 get_bws_server_url <- function() {
   bws_server_url <- Sys.getenv("BWS_SERVER_URL")
   if (bws_server_url == "") {
